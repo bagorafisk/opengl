@@ -1,4 +1,0 @@
-/home/bagora/Documents/opengl/build/CMakeFiles/glad.dir
-/home/bagora/Documents/opengl/build/CMakeFiles/opengl.dir
-/home/bagora/Documents/opengl/build/CMakeFiles/edit_cache.dir
-/home/bagora/Documents/opengl/build/CMakeFiles/rebuild_cache.dir
