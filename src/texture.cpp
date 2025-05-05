@@ -25,9 +25,14 @@ Texture::Texture(const char* image, const char* texType, GLuint slot, GLenum for
     glBindTexture(GL_TEXTURE_2D, 0);
 }
 
-void Texture::texUnit(Shader& shader, const char* uniform, GLuint unit) {
-    shader.use();
-    shader.setInt(uniform, unit);
+void Texture::texUnit(Shader& shader, const char* uniform, GLuint unit)
+{
+	// Gets the location of the uniform
+	GLuint texUni = glGetUniformLocation(shader.ID, uniform);
+	// Shader needs to be activated before changing the value of a uniform
+	shader.use();
+	// Sets the value of the uniform
+	glUniform1i(texUni, unit);
 }
 
 void Texture::Bind() {
